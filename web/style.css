@@ -1,0 +1,95 @@
+
+::selection {
+  color: white;
+  background: blue;
+}
+body {
+  border: 15px ridge rgb(61, 61, 255);
+  padding-bottom: 0px;
+  font-family: "VelekaRegular";
+  background-color: rgb(81, 151, 207);
+}
+h1 {
+  background-color: hsl(195, 53%, 79%);
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+h2 {
+  background-color: lightblue;
+  text-align: center;
+  font-size: 40px;
+}
+h3 {
+  background-color: lightblue;
+  text-align: center;
+  font-size: 40px;
+}
+h4 {
+  background-color: lightblue;
+  text-align: center;
+  font-size: 40px;
+}
+p {
+  background-color: lightblue;
+  text-align: center;
+  font-size: 20px;
+}
+pre {
+  background-color: lightblue;
+  text-align: center;
+  font-size: 30px;
+}
+table,
+th,
+td {
+  background-color: #61b3ff;
+  border: 1px solid black;
+}
+
+video {
+  width: 600px;
+}
+b {
+  background-color: lightblue;
+  color: red;
+  width: 300px;
+  border: 17px double rgb(81, 151, 207);
+  border-radius: 15px;
+  padding: 50px;
+  padding-bottom: 15px;
+  margin: 20px;
+  font-size: 25px;
+}
+#map {
+  background-color: lightblue;
+  width: 600px;
+  height: 416px;
+}
+#ese {
+  background-color: lightblue;
+  width: 600px;
+  height: 164px;
+}
+#bel {
+  background-color: lightblue;
+  width: 600px;
+  height: 362px;
+}
+.large {
+  background-color: hsl(195, 53%, 79%);
+  text-align: center;
+  font-size: 30px;
+  color: solid black;
+}
+a:hover {
+  color: white;
+}
+div p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+a[target] {
+  font-size: 27px;
+  background-color: rgb(81, 151, 207);
+}
