@@ -40,17 +40,17 @@ public class RegisterServlet extends HttpServlet {
                    """;
        
         String db = "jdbc:mariadb://localhost/kon";
-        String reqName;
-        String reqPass;
-        String reqMail;
+        String reqName = request.getParameter("name");
+        String reqPass = request.getParameter("pass");
+        String reqMail = request.getParameter("mail");
         try {
             Class.forName("org.mariadb.jdbc.Driver");
             Connection con = DriverManager.getConnection(db);
             Statement stmt = con.createStatement();
             String query = """
                            Insert into potre(name, pass, mail)
-                           values (\"fff\", \"fff\", \"fff");
-                           """;
+                           values (\"%s\", \"%s\", \"%s\");
+                           """.formatted(reqName, reqPass, reqMail);
             ResultSet rs = stmt.executeQuery(query);
         } catch (SQLException ex) {
             Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
