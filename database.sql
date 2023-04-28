@@ -8,4 +8,5 @@ create table potre(
   mail varchar(255)
 );
 insert into potre values
-  (1, "admin", "admin", "admin@local.bg");
+  (1, "admin", "admin", "admin@local.bg"),
+  (2, "usr", "u", "usr@local.bg");

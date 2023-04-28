@@ -15,6 +15,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.sql.Statement;
+import java.sql.ResultSet;
 /**
  *
  * @author ivansavov
@@ -38,9 +40,18 @@ public class RegisterServlet extends HttpServlet {
                    """;
        
         String db = "jdbc:mariadb://localhost/kon";
+        String reqName;
+        String reqPass;
+        String reqMail;
         try {
             Class.forName("org.mariadb.jdbc.Driver");
             Connection con = DriverManager.getConnection(db);
+            Statement stmt = con.createStatement();
+            String query = """
+                           Insert into potre(name, pass, mail)
+                           values (\"fff\", \"fff\", \"fff");
+                           """;
+            ResultSet rs = stmt.executeQuery(query);
         } catch (SQLException ex) {
             Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
